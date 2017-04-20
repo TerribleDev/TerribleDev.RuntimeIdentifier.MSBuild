@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>TerribleDev.RuntimeIdentifier.MSBuild</id>
+    <version>1.0.1</version>
+    <authors>Tommy Parnell</authors>
+    <owners>Tommy Parnell</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/TerribleDev/TerribleDev.RuntimeIdentifier.MSBuild</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Add an msbuild task to automatically compile your apps runtime identifier</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>msbuild dotnetcore runtimeidentifier </tags>
+  </metadata>
+  <files>
+    <file src=".\build\**" target="build" />
+    <file src=".\buildMultiTargeting\**" target="buildMultiTargeting" />
+    <file src=".\lib\**" target="lib" />
+    <file src="readme.txt" target="" />
+  </files>
+</package>

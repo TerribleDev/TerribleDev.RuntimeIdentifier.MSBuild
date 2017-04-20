@@ -1,0 +1,1 @@
+This is a simple package that hooks into the AfterPublish target, and compiles all of your runtime identifiers. After you install this you should run dotnet restore.

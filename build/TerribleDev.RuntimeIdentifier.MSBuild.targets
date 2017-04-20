@@ -1,0 +1,16 @@
+<Project>
+    <Target Name="PublishAll" AfterTargets="Publish" 
+          Condition="'$(RuntimeIdentifier)'=='' and '$(RuntimeIdentifiers)'!=''">
+    <ItemGroup>
+      <RIDsToPublish Include="$(RuntimeIdentifiers)" />
+    </ItemGroup>
+
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Targets="Publish" 
+             Properties="RuntimeIdentifier=%(RIDsToPublish.Identity)" 
+             RemoveProperties="RuntimeIdentifiers"/>
+  </Target>
+
+  <Target Name="PublishRID" AfterTargets="Publish" 
+          Condition="'$(RuntimeIdentifier)'!=''">
+  </Target>
+</Project>
